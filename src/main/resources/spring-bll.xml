@@ -17,9 +17,9 @@
 	<!-- 配置数据库连接池 -->
 	<bean name="dataSource" class="com.alibaba.druid.pool.DruidDataSource" 
 	      init-method="init" destroy-method="close">
-		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
-		<property name="url" value="jdbc:oracle:thin:@localhost:1521:AutoCDP" />
-		<property name="username" value="autocdp_admin" />
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/db_wms" />
+		<property name="username" value="wms_admin" />
 		<property name="password" value="123456" />
 		<!-- 初始化连接大小 -->
 		<property name="initialSize" value="0" />
@@ -33,7 +33,7 @@
 		<property name="maxWait" value="60000" />
 
 		<!-- 用来检测数据库连接是否有效的SQL -->
-		<property name="validationQuery" value="SELECT 1 FROM DUAL" />
+		<property name="validationQuery" value="SELECT 1" />
 		<property name="testOnBorrow" value="false" />
 		<property name="testOnReturn" value="false" />
 		<property name="testWhileIdle" value="true" />

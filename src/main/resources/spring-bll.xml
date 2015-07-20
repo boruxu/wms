@@ -14,7 +14,7 @@
 			expression="org.springframework.stereotype.Service"/>
 	</context:component-scan>
 
-	<!-- 配置数据库连接池 -->
+	<!-- 配置数据库MySQL连接池 -->
 	<bean name="dataSource" class="com.alibaba.druid.pool.DruidDataSource" 
 	      init-method="init" destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
